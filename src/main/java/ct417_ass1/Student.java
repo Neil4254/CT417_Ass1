@@ -10,14 +10,17 @@ public class Student {
     Course course;
     ArrayList<Module> modules;
 
-    public Student (String name, int age, int id, LocalDate dob, Course course) {
+    public Student (String name, int age, int id, LocalDate dob, Course course, ArrayList<Module> modules) {
         this.name = name;
         this.age = age;
         this.id = id;
         this.dob = dob;
         this.course = course;
-        modules = new ArrayList<Module>();
+        this.modules = modules;
+//        modules = new ArrayList<Module>();
     }
+
+
 
     public String getUsername() {
         return name + Integer.toString(age);
