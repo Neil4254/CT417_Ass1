@@ -52,8 +52,8 @@ class StudentTest {
 
         StudentTest test1 = new StudentTest();
 
-        Lecturer l1 = new Lecturer("Bob Robbins", 47, 9293848, LocalDate.of(1975, 3, 15));//String name, int age, int id, LocalDate dob
-        Lecturer l2 = new Lecturer("Dan Leman", 35, 5383234, LocalDate.of(1987, 5, 3));
+        Lecturer l1 = new Lecturer("Bob Robbins", 47, 9293848, LocalDate.of(1975, 3, 15), null);//String name, int age, int id, LocalDate dob
+        Lecturer l2 = new Lecturer("Dan Leman", 35, 5383234, LocalDate.of(1987, 5, 3), null);
         Module m1 = new Module("Software Engineering 3", "CT417", l1);
         Module m2 = new Module("Programming 4", "CT403", l2);
         ArrayList<Module> modules = new ArrayList<Module>();
@@ -157,7 +157,7 @@ class StudentTest {
 
     @Test
     void addModule() {
-        Lecturer l3 = new Lecturer("George Bullet", 31, 3483234, LocalDate.of(1995, 4, 19));
+        Lecturer l3 = new Lecturer("George Bullet", 31, 3483234, LocalDate.of(1995, 4, 19), null);
         Module m3 = new Module("System on Chip", "EE405", l3);
         s2.addModule(m3);
         modulesTest.add(m3);
@@ -167,7 +167,7 @@ class StudentTest {
 
     @Test
     void removeModule() {
-        Lecturer l3 = new Lecturer("George Bullet", 31, 3483234, LocalDate.of(1995, 4, 19));
+        Lecturer l3 = new Lecturer("George Bullet", 31, 3483234, LocalDate.of(1995, 4, 19), null);
         Module m3 = new Module("System on Chip", "EE405", l3);
         s2.addModule(m3);
         modulesTest.add(m3);

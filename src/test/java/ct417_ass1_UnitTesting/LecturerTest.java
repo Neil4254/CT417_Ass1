@@ -21,15 +21,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class LecturerTest {
 
     Lecturer l1;
+    ArrayList modulesTest;
 
 
     @BeforeEach
     void setUp() {
-        l1 = new Lecturer("Bob Robbins", 47, 9293848, LocalDate.of(1975, 3, 15));//String name, int age, int id, LocalDate dob
 
         Module m1 = new Module("Software Engineering 3", "CT417", null);
         Module m2 = new Module("Programming 4", "CT403", null);
-        ArrayList<Module> modulesTest;
+
+        ArrayList<Module> modules = new ArrayList<Module>();
+        modules.add(m1);
+        modules.add(m2);
+
+        modulesTest = modules;
+
+        l1 = new Lecturer("Bob Robbins", 47, 9293848, LocalDate.of(1975, 3, 15), modules);
     }
 
     @Test
@@ -92,14 +99,26 @@ class LecturerTest {
 
     @Test
     void getModules() {
+        assertEquals(modulesTest.toString(), l1.getModules());
 
     }
 
     @Test
     void addModule() {
+        Module m3 = new Module("System on Chip", "EE405", null);
+        l1.addModule(m3);
+        modulesTest.add(m3);
+
+        assertEquals(modulesTest.toString(), l1.getModules());
     }
 
     @Test
     void removeModule() {
+        Module m2 = new Module("Programming 4", "CT403", null);
+
+        l1.removeModule(m2);
+        modulesTest.remove(m2);
+
+        assertEquals(modulesTest.toString(), l1.getModules());
     }
 }

@@ -22,8 +22,9 @@ public class Course {
     }
 
     public String toString(){
-        String toReturn = "";
-
+        String toReturn = "\nCourse: " + courseName;
+        toReturn += "\nStart Date: " + startDate;
+        toReturn += "\nEnd Date: " + endDate;
         return toReturn;
     }
 
@@ -48,8 +49,8 @@ public class Course {
         this.endDate = endDate;
     }
 
-    public String getModules(){
-        return modules.toString();
+    public ArrayList<Module> getModules(){
+        return modules;
     }
     public void addModule(Module mod){
         modules.add(mod);

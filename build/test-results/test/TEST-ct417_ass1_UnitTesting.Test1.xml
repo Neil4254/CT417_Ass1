@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ct417_ass1_UnitTesting.Test1" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-14T15:04:46" hostname="NITRO-5-ND" time="0.06">
-  <properties/>
-  <testcase name="testStudent()" classname="ct417_ass1_UnitTesting.Test1" time="0.06"/>
-  <system-out><![CDATA[Starting Testing
-Testing student class
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -30,14 +30,14 @@ public class Module {
         return toReturn ;
     }
 
-    public String getModuleName() {
+    public String getModName() {
         return modName;
     }
     public void setModName(String modName) {
         this.modName = modName;
     }
 
-    public String getModuleId() {
+    public String getModId() {
         return modId;
     }
     public void setModId(String modId){

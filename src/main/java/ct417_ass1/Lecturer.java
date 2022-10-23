@@ -11,12 +11,13 @@ public class Lecturer {
 
     ArrayList<Module> modules;
 
-    public Lecturer (String name, int age, int id, LocalDate dob) {
+    public Lecturer (String name, int age, int id, LocalDate dob, ArrayList<Module> modules) {
         this.name = name;
         this.age = age;
         this.id = id;
         this.dob = dob;
-        modules = new ArrayList<Module>();
+//        modules = new ArrayList<Module>();
+        this.modules = modules;
     }
 
     public String getUsername() {
